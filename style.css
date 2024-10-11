@@ -1,0 +1,166 @@
+/*==============DESIGN SYSTEM==================*/
+
+:root {
+  /*========================COLORS========================================*/
+
+  --clr-red: #ea5454;
+  --clr-green: #44d3d2;
+  --clr-brown: #fcae4a;
+  --clr-blue: #549ef2;
+  --clr-black: #4d4f62;
+
+  /*========================SPACING========================================*/
+
+  --spacing-xxl: 64px;
+  --spacing-xl: 48px;
+  --spacing-l: 30px;
+  --spacing-m: 16px;
+  --spacing-s: 6px;
+
+  /*========================FONT SIZE========================================*/
+
+  --fs-l: 36px;
+  --fs-m: 15px;
+
+  --fs-bl: 20px;
+  --fs-bm: 13px;
+}
+
+/*==============RESETS==================*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Poppins", sans-serif;
+  color: var(--clr-black);
+}
+
+p {
+  opacity: 50%;
+  font-weight: 400;
+}
+
+body {
+  background: #fafafa;
+}
+
+.container {
+  width: 1110px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxl);
+}
+
+.card-top {
+  width: 540px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.card-top h1 {
+  font-weight: 200;
+  font-size: var(--fs-l);
+  margin-bottom: var(--spacing-s);
+}
+
+.card-top h1 span {
+  font-weight: 600;
+}
+
+.card-top p {
+  font-size: var(--fs-m);
+}
+
+.card-bottom {
+  display: flex;
+  gap: var(--spacing-l);
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 350px;
+  height: 250px;
+  border-radius: 6px;
+  position: relative;
+  padding: 32px;
+}
+
+.card-bottom .card:first-child {
+  box-shadow: 0 -4px 0px 0px var(--clr-green), 0 3px 20px rgb(0 0 0 / 0.2);
+}
+
+.card-bottom .card:last-child {
+  box-shadow: 0 -4px 0px 0px var(--clr-blue), 0 3px 20px rgb(0 0 0 / 0.2);
+}
+
+.card-bottom-middle .card:first-child {
+  box-shadow: 0 -4px 0px 0px var(--clr-red), 0 3px 20px rgb(0 0 0 / 0.2);
+}
+
+.card-bottom-middle .card:last-child {
+  box-shadow: 0 -4px 0px 0px var(--clr-brown), 0 3px 20px rgb(0 0 0 / 0.2);
+}
+
+.card h2 {
+  font-size: var(--fs-bl);
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: var(--fs-bm);
+}
+
+.card img {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  width: 64px;
+  height: 64px;
+}
+
+.card-bottom-middle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    gap: 76px;
+    padding: 0 32px;
+  }
+
+  .card-top {
+    width: 100%;
+  }
+
+  .card-top h1 {
+    font-size: 24px;
+    margin-bottom: var(--spacing-m);
+  }
+
+  .card-top p {
+    font-size: 15px;
+  }
+
+  .card-bottom {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 311px;
+  }
+}
